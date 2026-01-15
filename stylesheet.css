@@ -115,3 +115,74 @@ section.section-cta {
     font-weight: bold;
     font-style: italic;
 }
+section.cart-section {
+    display: block;
+    margin-left: 1200px;
+    margin-top: 120px;
+    font-size: 24px;
+    font-weight: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+.h1-cart-title {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 40px;
+    margin-top: 120px;
+    }
+  .image-jacket {
+    border-radius: 8px;
+    margin-left: -50px;
+    width: 400px;
+    height: auto;
+    box-shadow: 10px 10px 20px rgba(6, 65, 35, 0.322);
+    background-color: turquoise;
+    margin-top: 150px;
+    }
+  .checkout-section {
+        display: block;
+        margin-left: 1200px;
+        margin-top: 120px;
+        font-size: 18px;
+        font-weight: normal;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .proceed-cta {
+            background-color: lightblue;
+            border-radius: 8px;
+            padding: 10px 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            margin-top: 50px;
+            margin-left: 1100px;
+        }
+        .shop-cta {
+            background-color: lightblue;
+            border-radius: 8px;
+            padding: 10px 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            margin-top: 20px;
+            margin-left:  100px;
+        }
+        .products-like {
+            font-size: 28px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 1200px;
+            margin-top: 120px;
+        }
+        .others {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+            margin: 50px;
+            gap: 50px;
+            margin-left: -20px;
+            margin-bottom: 50px;
+        }
