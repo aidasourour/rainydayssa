@@ -237,10 +237,45 @@ section.cart-section {
         .checkout-form {
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 100px;
             margin-top: 20px;
-            margin-left: -1000px;
+            margin-left: -300px;
             font-size: 18px;
             font-weight: bolder;
             font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            width: 1000px;
         }
+        .checkout-title {
+            font-size: 42px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            padding: 16px;
+            font-size: 16px;
+            border: 4px solid black;
+            border-radius: 5px;
+            width: 900px;
+            }
+            select {
+                padding: 16px;
+                font-size: 16px;
+                border: 4px solid black;
+                border-radius: 5px;
+                width: 940px;
+            }
+button.submit-button {
+                background-color: lightblue;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 24px;
+                font-size: 24px;
+                font-weight: bold;
+                font-style: italic;
+                cursor: pointer;
+                margin-top: 20px;
+                width: 200px;
+                margin-left: 400px;
+            } 
