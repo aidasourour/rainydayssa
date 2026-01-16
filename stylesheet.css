@@ -17,6 +17,7 @@ header img, header .img {
   width: auto;
   display: inline-block;
   vertical-align: middle;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
