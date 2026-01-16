@@ -234,3 +234,13 @@ section.cart-section {
             margin-left: 10px;
             box-shadow: 10px 10px 20px rgba(6, 65, 35, 0.322);
         }
+        .checkout-form {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 20px;
+            margin-left: -1000px;
+            font-size: 18px;
+            font-weight: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        }
