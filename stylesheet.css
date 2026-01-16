@@ -193,17 +193,19 @@ section.cart-section {
             font-size: 42px;
             font-weight: bold;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin-left: -500px;
-            margin-top: 300px;
+            text-align: center;
+            margin: 20px 0;
+            margin-top: 250px;
         }
         .contact-info {
             font-size: 24px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin-left: -600px;
-            margin-top: 700px;
             font-weight: bolder;
             font-style: italic;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            align-items: center;
+            margin: 20px 0;
+            margin-top: 300px;
         }
