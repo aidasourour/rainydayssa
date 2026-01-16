@@ -127,7 +127,8 @@ section.cart-section {
     font-size: 24px;
     font-weight: normal;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: aqua;
+    background-color: lightsteelblue;
+    border-radius: 50px;
     }
 .h1-cart-title {
     font-size: 32px;
