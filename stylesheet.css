@@ -17,7 +17,7 @@ header img, header .img {
   width: auto;
   display: inline-block;
   vertical-align: middle;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(6, 65, 35, 0.322);
 }
 
 nav ul {
@@ -89,7 +89,7 @@ section.view-products {
   margin-left: 1200px;
   background-color: lightsteelblue;
   padding: 10px 20px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 20px rgba(6, 65, 35, 0.322);
 }
 
 .product-gallery {
@@ -224,4 +224,13 @@ section.cart-section {
             margin-left: -20px;
             margin-bottom: 50px;
             margin-top: 100px;
+        }
+        .logo {
+            height: 150px;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-left: 10px;
+            box-shadow: 10px 10px 20px rgba(6, 65, 35, 0.322);
         }
