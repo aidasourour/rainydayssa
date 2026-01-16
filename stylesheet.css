@@ -294,3 +294,26 @@ button.submit-button {
     padding: 60px 10px 60px 10px;
     box-shadow: 10px 10px 20px rgba(6, 65, 35, 0.322);
 }
+.continue-shopping {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 1300px;
+    margin-top: 50px;
+    background-color: lightblue;
+    border-radius: 8px;
+    padding: 5px 15px;
+    box-shadow: 10px 10px 20px rgba(6, 65, 35, 0.322);
+    display: inline-block;
+} 
+footer {
+    text-align: center;;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    margin-top: 300px;
+    margin-bottom: 20px;
+    padding: 1px;
+    background-color: lightsteelblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
