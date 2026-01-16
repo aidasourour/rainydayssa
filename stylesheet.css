@@ -73,7 +73,7 @@ section.story-text {
     font-weight: bold; color: green;
     padding: 40px;
 }
-section.section-cta {
+section.view-products {
   display: block;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -83,9 +83,12 @@ section.section-cta {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 32px;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-top: 100px;
   margin-left: 1200px;
+  background-color: lightsteelblue;
+  padding: 10px 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-gallery {
