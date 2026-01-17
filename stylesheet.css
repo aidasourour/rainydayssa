@@ -105,6 +105,19 @@ section.view-products {
     font-style: italic;
 }
 
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 20px;
+}
+
+.product {
+    text-align: center;
+    max-width: 400px;
+}
+
 .product-intro {
     text-align: center;
     font-size: 25px;
@@ -260,11 +273,11 @@ section.cart-section {
             width: 900px;
             }
             select {
-                padding: 16px;
-                font-size: 16px;
-                border: 4px solid black;
+                padding: 8px;
+                font-size: 14px;
+                border: 2px solid black;
                 border-radius: 5px;
-                width: 940px;
+                width: 120px;
             }
 button.submit-button {
                 background-color: lightblue;
@@ -317,3 +330,14 @@ footer {
     background-color: lightsteelblue;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.add-to-cart-button {
+    background-color: lightblue;
+    border-radius: 8px;
+    padding: 10px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+}
+
