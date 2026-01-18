@@ -95,10 +95,9 @@ section.view-products {
 .product-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 150px;
     justify-content: center;
     margin: 200px;
-    gap: 150px;
     font-size: 24px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
@@ -116,6 +115,9 @@ section.view-products {
 .product {
     text-align: center;
     max-width: 400px;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .product-intro {
@@ -243,9 +245,7 @@ section.cart-section {
             width: auto;
             display: inline-block;
             vertical-align: middle;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin-left: 10px;
-            box-shadow: 10px 10px 20px rgba(6, 65, 35, 0.322);
         }
         .checkout-form {
             display: flex;
@@ -335,9 +335,20 @@ footer {
     border-radius: 8px;
     padding: 10px 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     font-style: italic;
-    margin-top: 10px;
 }
 
+section.prod-info {
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-style: italic;
+    margin-left: 1000px;
+    display: wrap;
+    margin-top: -800px;
+}
+section.copyright {
+    margin-top: 1200px;
+}
