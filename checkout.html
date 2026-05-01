@@ -27,36 +27,47 @@
     <title>Rainydays | Checkout</title>
   </head>
   <body>
-    <header>
-      <a href="index.html"
-        ><img
-          src="images-rainy-days/logo.png"
-          class="logo"
-          alt="Rainy Days logo: a dark teal mountain silhouette above bold sans-serif text reading Rainy Days, with a tagline Pushing the Comfort Zone and decorative X symbols below"
-      /></a>
-      <nav class="nav-bar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="cart.html">Cart</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div>
-        <section class="checkout-section">
-          <h1>Your Cart</h1>
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img
+            src="images-rainy-days/logo.png"
+            alt="Rainy Days logo"
+            class="logo"
+          />
+        </a>
 
-          <div id="cart-container"></div>
-          <h2 id="total"></h2>
-
-          <a href="confirmation.html">
-            <button id="checkoutBtn">Checkout</button>
-          </a>
-        </section>
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="checkout.html">Cart</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
+    <main class="cart-page">
+      <h1>Your Cart</h1>
+
+      <section class="cart-layout">
+        <div class="cart-left">
+          <div id="cart-container"></div>
+        </div>
+
+        <aside class="cart-summary">
+          <h2>Order Summary</h2>
+          <p>Subtotal: <span id="subtotal">$0</span></p>
+          <p>Shipping: <span>Calculated at checkout</span></p>
+          <hr />
+          <h3>Total: <span id="total">$0</span></h3>
+
+          <a href="confirmation.html" class="checkout-button">Checkout</a>
+        </aside>
+      </section>
     </main>
+
+    <script src="js/cart.js"></script>
     <footer>
       <p>&copy; 2024 Rainydays. All rights reserved.</p>
     </footer>
