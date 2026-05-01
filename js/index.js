@@ -13,21 +13,20 @@ async function displayProducts() {
     loading.style.display = "none";
     productsContainer.innerHTML = "";
 
-    products.forEach((product) => {
-      const price =
-        product.discountedPrice < product.price
-          ? product.discountedPrice
-          : product.price;
+   products.forEach((product) => {
+  const price =
+    product.discountedPrice < product.price
+      ? product.discountedPrice
+      : product.price;
 
-      productsContainer.innerHTML += `
-        <div class="product-card">
-          <img src="${product.image.url}" alt="${product.image.alt}">
-          <h2>${product.title}</h2>
-          <p>$${price}</p>
-          <a href="jacket.html?id=${product.id}">View product</a>
-        </div>
-      `;
-    });
+  productsContainer.innerHTML += `
+    <a href="jacket.html?id=${product.id}" class="product-card">
+      <img src="${product.image.url}" alt="${product.image.alt}">
+      <h2>${product.title}</h2>
+      <p>$${price}</p>
+    </a>
+  `;
+});
   } catch (error) {
     loading.style.display = "none";
     errorMessage.textContent = "Could not load products.";
