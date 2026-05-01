@@ -1,34 +1,20 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon_io/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon_io/android-chrome-192x192.png"
-    />
-    <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png" />
-    <link rel="stylesheet" href="stylesheet.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto@1&display=swap"
-      rel="stylesheet"
-    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rainydays | Contact</title>
+    <link rel="stylesheet" href="stylesheet.css" />
   </head>
+
   <body>
     <header class="site-header">
       <div class="nav-container">
+        <nav class="nav-left">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+        </nav>
+
         <a href="index.html" class="logo-link">
           <img
             src="images-rainy-days/logo.png"
@@ -37,32 +23,30 @@
           />
         </a>
 
-        <nav class="nav-bar">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="checkout.html">Cart</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
+        <nav class="nav-right">
+          <a href="cart.html">Cart</a>
+          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </header>
-    <main>
-      <div>
-        <h1 class="contact-title">Contact Us</h1>
-      </div>
-      <div class="contact-info">
-        <p>Email: contact@rainydays.com</p>
-        <p>Phone: +47 123 45 678</p>
-        <p>Address: 123 Rainy St, Oslo, Norway</p>
-        <p>Business Hours: Mon-Fri 9am - 5pm</p>
-      </div>
-      <section></section>
+
+    <main class="contact-page">
+      <section class="contact-card">
+        <h1>Contact Us</h1>
+        <p>Have questions? We’d love to hear from you.</p>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
     </main>
-    <section class="copyright">
-      <footer>
-        <p>&copy; 2024 Rainydays. All rights reserved.</p>
-      </footer>
-    </section>
+
+    <footer>
+      <p>&copy; 2024 Rainydays. All rights reserved.</p>
+    </footer>
   </body>
 </html>

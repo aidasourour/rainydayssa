@@ -1,19 +1,16 @@
 import { getProduct } from "./api.js";
 
+// Elements
 const container = document.querySelector("#product-container");
 const loading = document.querySelector("#loading");
 const errorMessage = document.querySelector("#error");
 
+// Get ID from URL
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
+// Display product
 async function displayProduct() {
-  if (!id) {
-    loading.style.display = "none";
-    errorMessage.textContent = "No product ID found in the URL.";
-    return;
-  }
-
   try {
     const product = await getProduct(id);
 
@@ -24,33 +21,61 @@ async function displayProduct() {
         <img src="${product.image.url}" alt="${product.image.alt}">
         <h1>${product.title}</h1>
         <p>${product.description}</p>
-        <p>$${product.discountedPrice}</p>
-        <button id="addToCart">Add to cart</button>
+        <p><strong>Price: $${product.price}</strong></p>
+
+        ${
+          product.discountedPrice < product.price
+            ? `<p style="color: green;">Discount: $${product.discountedPrice}</p>`
+            : ""
+        }
+
+        <button id="addToCart">Add to Cart</button>
       </div>
     `;
 
+    // Add to cart button
     document.querySelector("#addToCart").addEventListener("click", () => {
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cart.push(product);
-      localStorage.setItem("cart", JSON.stringify(cart));
+      addToCart(product);
       showCartPopup();
     });
+
   } catch (error) {
     loading.style.display = "none";
-    errorMessage.textContent = `Failed to load product: ${error.message}`;
+    errorMessage.textContent = "Failed to load product.";
     console.error(error);
   }
 }
 
-displayProduct();
-function showCartPopup() {
-  document.querySelector("#cart-popup").classList.remove("hidden");
+// Add to cart function
+function addToCart(product) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cart.push({
+    id: product.id,
+    title: product.title,
+    price: product.discountedPrice < product.price
+      ? product.discountedPrice
+      : product.price,
+    image: product.image.url
+  });
+
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-document.querySelector("#close-popup").addEventListener("click", () => {
-  document.querySelector("#cart-popup").classList.add("hidden");
+// Show popup
+function showCartPopup() {
+  const popup = document.querySelector("#cart-popup");
+  if (popup) {
+    popup.classList.remove("hidden");
+  }
+}
+
+// Close popup
+document.addEventListener("click", (e) => {
+  if (e.target.id === "close-popup" || e.target.id === "continue-shopping") {
+    document.querySelector("#cart-popup").classList.add("hidden");
+  }
 });
 
-document.querySelector("#continue-shopping").addEventListener("click", () => {
-  document.querySelector("#cart-popup").classList.add("hidden");
-});
+// Run
+displayProduct();

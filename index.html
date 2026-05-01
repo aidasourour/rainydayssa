@@ -1,77 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<link rel="icon" href="/favicon/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/android-chrome-192x192.png">
-<link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto@1&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainydays | Home </title>
-</head>
-<body>
-<header class="site-header">
-  <div class="nav-container">
-    
-    <a href="index.html" class="logo-link">
-      <img src="images-rainy-days/logo.png" alt="Rainy Days logo" class="logo">
-    </a>
+  <head>
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/android-chrome-192x192.png"
+    />
+    <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto@1&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainydays | Home</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-container">
+        <nav class="nav-left">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+        </nav>
 
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="checkout.html">Cart</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+        <a href="index.html" class="logo-link">
+          <img
+            src="images-rainy-days/logo.png"
+            alt="Rainy Days logo"
+            class="logo"
+          />
+        </a>
 
-  </div>
-</header>
-<main>
-  <main>
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Rain Jackets Built for Adventure</h1>
-      <p>Comfortable, durable jackets made for rainy days and outdoor exploring.</p>
-      <a href="products.html" class="hero-button">Shop Jackets</a>
-    </div>
-  </section>
-
-  <section class="home-section">
-    <h2>Why Choose Rainy Days?</h2>
-
-    <div class="features">
-      <div class="feature-card">
-        <h3>Waterproof</h3>
-        <p>Designed to keep you dry in rough weather.</p>
+        <nav class="nav-right">
+          <a href="cart.html">Cart</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Rain Jackets Built for Adventure</h1>
+          <p>
+            Comfortable, durable jackets made for rainy days and outdoor
+            exploring.
+          </p>
+          <a href="products.html" class="hero-button">Shop Jackets</a>
+        </div>
+      </section>
 
-      <div class="feature-card">
-        <h3>Comfortable</h3>
-        <p>Lightweight jackets made for movement.</p>
-      </div>
+      <section class="home-section">
+        <h2>Why Choose Rainy Days?</h2>
 
-      <div class="feature-card">
-        <h3>Outdoor Ready</h3>
-        <p>Perfect for hiking, camping, and daily use.</p>
-      </div>
-    </div>
-  </section>
-</main>
+        <div class="features">
+          <div class="feature-card">
+            <h3>Waterproof</h3>
+            <p>Designed to keep you dry in rough weather.</p>
+          </div>
 
-  <div id="loading">Loading products...</div>
-  <div id="error"></div>
-  <div id="products-container"></div>
- </div>
-</main>
-<footer>
-    <p>&copy; 2024 Rainydays. All rights reserved.</p>
-</footer>
-<script type="module" src="js/index.js"></script>
-</body> 
+          <div class="feature-card">
+            <h3>Comfortable</h3>
+            <p>Lightweight jackets made for movement.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Outdoor Ready</h3>
+            <p>Perfect for hiking, camping, and daily use.</p>
+          </div>
+        </div>
+      </section>
+      <section class="preview-section">
+        <h2>Featured Jackets</h2>
+        <div id="products-container"></div>
+        <a href="products.html" class="hero-button">View all products</a>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Rainydays. All rights reserved.</p>
+    </footer>
+    <script type="module" src="js/index.js"></script>
+  </body>
 </html>

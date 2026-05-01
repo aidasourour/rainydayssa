@@ -29,20 +29,17 @@
   <body>
 <header class="site-header">
   <div class="nav-container">
-    
+    <nav class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+    </nav>
     <a href="index.html" class="logo-link">
       <img src="images-rainy-days/logo.png" alt="Rainy Days logo" class="logo">
     </a>
-
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="checkout.html">Cart</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <nav class="nav-right">
+      <a href="cart.html">Cart</a>
+      <a href="contact.html">Contact</a>
     </nav>
-
   </div>
 </header>
     <main>
@@ -52,12 +49,11 @@
       </section>
     </main>
     <section class="copyright">
-      <footer>
-        <p>&copy; 2024 Rainydays. All rights reserved.</p>
-      </footer>
+     <footer>
+  <p>&copy; 2024 Rainydays. All rights reserved.</p>
+</footer>
     </section>
-    <script type="module" src="js/product.js"></script>
-     <div id="cart-popup" class="cart-popup hidden">
+<div id="cart-popup" class="cart-popup hidden">
   <div class="cart-popup-box">
     <button id="close-popup" class="close-popup">×</button>
     <div class="checkmark">✓</div>
@@ -65,10 +61,11 @@
     <p>Your item has been added successfully.</p>
 
     <div class="popup-buttons">
-      <a href="checkout.html">View cart</a>
+      <a href="cart.html">View cart</a>
       <button id="continue-shopping">Continue shopping</button>
     </div>
   </div>
 </div>
-  </body>
+<script type="module" src="js/product.js"></script>
+</body>
 </html>
