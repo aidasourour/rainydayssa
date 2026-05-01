@@ -18,7 +18,7 @@ main {
   flex: 1;
 }
 
-/* ================= NAVBAR ================= */
+/*NAVBAR*/
 
 .site-header {
   background: white;
@@ -89,7 +89,7 @@ main {
   width: 100%;
 }
 
-/* ================= HERO ================= */
+/*HERO*/
 
 .hero {
   min-height: 520px;
@@ -127,7 +127,7 @@ main {
   font-weight: bold;
 }
 
-/* ================= HOME SECTION ================= */
+/*HOME SECTION */
 
 .home-section {
   max-width: 1000px;
@@ -150,7 +150,7 @@ main {
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* ================= PRODUCTS ================= */
+/*PRODUCTS*/
 
 #products-container {
   display: grid;
@@ -184,7 +184,7 @@ main {
   text-decoration: none;
 }
 
-/* ================= PRODUCT PAGE ================= */
+/*PRODUCT PAGE*/
 
 .product-detail {
   max-width: 800px;
@@ -206,7 +206,7 @@ main {
   border-radius: 6px;
 }
 
-/* ================= CART ================= */
+/*CART*/
 
 .cart-page {
   max-width: 1000px;
@@ -241,7 +241,7 @@ main {
   border-radius: 6px;
 }
 
-/* ================= FOOTER ================= */
+/*FOOTER*/
 
 footer {
   text-align: center;
@@ -249,7 +249,7 @@ footer {
   background: #b6c9df;
 }
 
-/* ================= MOBILE ================= */
+/*MOBILE*/
 
 @media (max-width: 700px) {
   .nav-container {
@@ -526,7 +526,7 @@ footer {
 .product-card img {
   width: 100%;
   height: 260px;
-  object-fit: contain; /* FIXES cropping issue */
+  object-fit: contain;
   margin-bottom: 12px;
 }
 
