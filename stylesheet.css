@@ -93,10 +93,14 @@ main {
 
 .hero {
   min-height: 520px;
-  background: linear-gradient(rgba(6, 59, 61, 0.6), rgba(6, 59, 61, 0.6)),
-    url("../images-rainy-days/header-image.jpg");
+  background-color: #063b3d;
+  background-image:
+    linear-gradient(rgba(6, 59, 61, 0.6), rgba(6, 59, 61, 0.6)),
+    url("images-rainy-days/header-image.jpg");
   background-size: cover;
-  background-position: 50% 20%;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   padding: 40px;
