@@ -1,55 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <link rel="icon" href="/favicon/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/android-chrome-192x192.png">
-<link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto@1&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainydays | Checkout </title>
-</head>
-<body>
-<header>
-    <a href="index.html"><img src="images-rainy-days/logo.png" class="logo" alt="Rainy Days logo: a dark teal mountain silhouette above bold sans-serif text reading Rainy Days, with a tagline Pushing the Comfort Zone and decorative X symbols below"></a>
-        <nav class="nav-bar">
-           <ul>
-            <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="contact.html">Contact</a></li>
-     </ul>
-     </nav>
-</header>
-<main>
-    <div>
+  <head>
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/android-chrome-192x192.png"
+    />
+    <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto@1&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainydays | Checkout</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img
+          src="images-rainy-days/logo.png"
+          class="logo"
+          alt="Rainy Days logo: a dark teal mountain silhouette above bold sans-serif text reading Rainy Days, with a tagline Pushing the Comfort Zone and decorative X symbols below"
+      /></a>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div>
         <section class="checkout-section">
-            <h1 class="checkout-title">Checkout</h1>
-            <form class="checkout-form">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="address">Shipping Address:</label>
-                <input type="text" id="address" name="address" required>
-                
-                <label for="payment">Payment Method:</label>
-                <select id="payment" name="payment" required>
-                    <option value="credit-card">Credit Card</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="bank-transfer">Bank Transfer</option>
-                    <option value="klarna">Klarna</option>
-                </select>
-                 <a href="confirmation.html"><button type="submit" class="submit-button">Place Order</a></button>
-            </form>
+          <h1>Your Cart</h1>
+
+          <div id="cart-container"></div>
+          <h2 id="total"></h2>
+
+          <a href="confirmation.html">
+            <button id="checkoutBtn">Checkout</button>
+          </a>
         </section>
-    </div>
-</main>
-<footer>
-    <p>&copy; 2024 Rainydays. All rights reserved.</p>
-</footer>
-</body> 
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Rainydays. All rights reserved.</p>
+    </footer>
+    <script src="js/cart.js"></script>
+  </body>
 </html>

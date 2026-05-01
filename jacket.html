@@ -1,51 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<link rel="icon" href="/favicon/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/android-chrome-192x192.png">
-<link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png">
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto@1&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainydays | Rainyday Jacket </title>
-</head>
-<body>
-<header>
-    <a href="index.html"><img src="images-rainy-days/logo.png" class="logo" alt="Rainy Days logo: a dark teal mountain silhouette above bold sans-serif text reading Rainy Days, with a tagline Pushing the Comfort Zone and decorative X symbols below"></a>
-        <nav class="nav-bar">
-           <ul>
-            <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="maincart.html">Cart</a></li>
-        <li><a href="contact.html">Contact</a></li>
-     </ul>
-     </nav>
-</header>
-<main>
-    <div>
-    <img src="images-rainy-days/jacket1.jpg" alt="rainydays jacket" width="700px">
+  <head>
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/android-chrome-192x192.png"
+    />
+    <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto@1&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainydays | Rainyday Jacket</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img
+          src="images-rainy-days/logo.png"
+          class="logo"
+          alt="Rainy Days logo: a dark teal mountain silhouette above bold sans-serif text reading Rainy Days, with a tagline Pushing the Comfort Zone and decorative X symbols below"
+      /></a>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="loading">Loading product...</div>
+      <div id="error"></div>
+      <div id="product-container"></div>
+      </section>
+    </main>
+    <section class="copyright">
+      <footer>
+        <p>&copy; 2024 Rainydays. All rights reserved.</p>
+      </footer>
+    </section>
+    <script type="module" src="js/product.js"></script>
+     <div id="cart-popup" class="cart-popup hidden">
+  <div class="cart-popup-box">
+    <button id="close-popup" class="close-popup">×</button>
+    <div class="checkmark">✓</div>
+    <h2>Added to cart!</h2>
+    <p>Your item has been added successfully.</p>
+
+    <div class="popup-buttons">
+      <a href="checkout.html">View cart</a>
+      <button id="continue-shopping">Continue shopping</button>
     </div>
-    <h1>
-    Rainydays jacket
-    </h1>
-    <section >
-       <label for="jacket1"><select name="sizes" id="jacket1-sizes"><option value="small">Small</option><option value="medium">Medium</option><option value="large">Large</option><option value="x-large">X-Large</option></select></label>
-         <a href="cart1.html"button type="submit" class="add-to-cart-button">Add to Cart</a>
-    </section>
-    <h2>1900 NOK</h2>
-    <section class="prod-info">
-<p2>Rainydays jacket works for all kinds of weather. Whether its snowy, rainy, windy or just a little chilly, 
-    rainydays everyday jacket is your go to jacket to keep yourself warm and dry on busy days!</p2>
-    </section>
-</main>
-<section class="copyright">
-<footer>
-    <p>&copy; 2024 Rainydays. All rights reserved.</p>
-</footer>
-</section>
-</body> 
+  </div>
+</div>
+  </body>
 </html>
