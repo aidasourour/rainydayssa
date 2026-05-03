@@ -34,10 +34,17 @@ async function displayProduct() {
     `;
 
     // Add to cart button
-    document.querySelector("#addToCart").addEventListener("click", () => {
-      addToCart(product);
-      showCartPopup();
-    });
+   document.querySelector("#addToCart").addEventListener("click", () => {
+  const size = document.querySelector("#sizeSelect").value;
+
+  if (!size) {
+    alert("Please select a size");
+    return;
+  }
+
+  addToCart(product, size);
+  showCartPopup();
+});
 
   } catch (error) {
     loading.style.display = "none";
@@ -47,16 +54,20 @@ async function displayProduct() {
 }
 
 // Add to cart function
-function addToCart(product) {
+function addToCart(product, size) {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const price =
+    product.discountedPrice < product.price
+      ? product.discountedPrice
+      : product.price;
 
   cart.push({
     id: product.id,
     title: product.title,
-    price: product.discountedPrice < product.price
-      ? product.discountedPrice
-      : product.price,
-    image: product.image.url
+    price: price,
+    image: product.image.url,
+    size: size
   });
 
   localStorage.setItem("cart", JSON.stringify(cart));
