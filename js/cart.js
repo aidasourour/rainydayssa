@@ -26,18 +26,29 @@ function loadCart() {
     const price = Number(product.price);
     total += price;
 
-    container.innerHTML += `
-      <div class="cart-item">
-        <img src="${product.image}" alt="${product.title}" class="cart-image">
+container.innerHTML += `
+  <div class="cart-item">
+    <img 
+      src="${product.image}" 
+      alt="${product.title}" 
+      class="cart-image"
+    >
 
-        <div class="cart-info">
-          <h2>${product.title}</h2>
-          <strong>$${price.toFixed(2)}</strong>
-        </div>
+    <div class="cart-info">
+      <h2>${product.title}</h2>
 
-        <button class="removeBtn" data-index="${index}">Remove</button>
-      </div>
-    `;
+      <p class="cart-size">
+        Size: <strong>${product.size || "Not selected"}</strong>
+      </p>
+
+      <strong>$${Number(product.price).toFixed(2)}</strong>
+    </div>
+
+    <button class="removeBtn" data-index="${index}">
+      Remove
+    </button>
+  </div>
+`;
   });
 
   if (subtotalElement) subtotalElement.textContent = `$${total.toFixed(2)}`;

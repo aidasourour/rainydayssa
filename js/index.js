@@ -4,6 +4,8 @@ const productsContainer = document.querySelector("#products-container");
 const loading = document.querySelector("#loading");
 const errorMessage = document.querySelector("#error");
 
+let selectedProduct = null;
+
 async function displayProducts() {
   try {
     loading.style.display = "block";
@@ -32,14 +34,19 @@ async function displayProducts() {
             </div>
           </a>
 
-          <button type="button" class="quick-add-btn" data-id="${product.id}">
+          <button class="quick-add-btn" data-id="${product.id}">
             Add to Cart
           </button>
         </div>
       `;
     });
 
-    addQuickAddEvents(products);
+    document.querySelectorAll(".quick-add-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        selectedProduct = products.find((product) => product.id === button.dataset.id);
+        openSizePopup();
+      });
+    });
 
   } catch (error) {
     loading.style.display = "none";
@@ -48,25 +55,16 @@ async function displayProducts() {
   }
 }
 
-function addQuickAddEvents(products) {
-  document.querySelectorAll(".quick-add-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      const selectedProduct = products.find((product) => product.id === button.dataset.id);
-
-      addToCart(selectedProduct);
-
-      button.textContent = "Added!";
-      button.classList.add("added");
-
-      setTimeout(() => {
-        button.textContent = "Add to Cart";
-        button.classList.remove("added");
-      }, 1200);
-    });
-  });
+function openSizePopup() {
+  document.querySelector("#size-popup").classList.remove("hidden");
 }
 
-function addToCart(product) {
+function closeSizePopup() {
+  document.querySelector("#size-popup").classList.add("hidden");
+  document.querySelector("#popup-size-select").value = "";
+}
+
+function addToCart(product, size) {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   const price =
@@ -79,10 +77,24 @@ function addToCart(product) {
     title: product.title,
     price: price,
     image: product.image.url,
-    size: "Not selected"
+    size: size
   });
 
   localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+document.querySelector("#confirm-size-btn").addEventListener("click", () => {
+  const size = document.querySelector("#popup-size-select").value;
+
+  if (!size) {
+    alert("Please select a size");
+    return;
+  }
+
+  addToCart(selectedProduct, size);
+  closeSizePopup();
+});
+
+document.querySelector("#close-size-popup").addEventListener("click", closeSizePopup);
 
 displayProducts();
