@@ -20,24 +20,23 @@ async function displayProducts() {
           : product.price;
 
       productsContainer.innerHTML += `
-        <div class="product-card">
-          <a href="jacket.html?id=${product.id}" class="product-card-link">
-            <div class="product-image-box">
-              <img src="${product.image.url}" alt="${product.image.alt}">
-              <span class="view-label">View product</span>
-            </div>
+  <div class="product-card">
+    <a href="jacket.html?id=${product.id}" class="product-card-link">
+      <div class="product-image-box">
+        <img src="${product.image.url}" alt="${product.image.alt}">
+      </div>
 
-            <div class="product-card-info">
-              <h2>${product.title}</h2>
-              <p class="product-price">$${Number(price).toFixed(2)}</p>
-            </div>
-          </a>
+      <div class="product-card-info">
+        <h2>${product.title}</h2>
+        <p class="product-price">$${Number(price).toFixed(2)}</p>
+      </div>
+    </a>
 
-          <button class="quick-add-btn" data-id="${product.id}">
-            Add to Cart
-          </button>
-        </div>
-      `;
+    <button type="button" class="quick-add-btn" data-id="${product.id}">
+      Add to Cart
+    </button>
+  </div>
+`;
     });
 
     addQuickAddEvents(products);

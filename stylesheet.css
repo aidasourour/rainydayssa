@@ -852,3 +852,55 @@ footer {
 #checkout-form button:hover {
   background: #0b5558;
 }
+.quick-add-btn {
+  display: block;
+  width: calc(100% - 36px);
+  margin: 0 18px 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #063b3d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.quick-add-btn.added {
+  background: #1f7a35;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.quick-add-btn {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: calc(100% - 36px);
+  margin: 12px 18px 18px;
+  padding: 12px;
+  background-color: #063b3d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.quick-add-btn:hover {
+  background-color: #0b5558;
+}
+
+.quick-add-btn.added {
+  background-color: #1f7a35;
+}
