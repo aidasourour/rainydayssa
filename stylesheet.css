@@ -904,3 +904,10 @@ footer {
 .quick-add-btn.added {
   background-color: #1f7a35;
 }
+.size-select {
+  display: block;
+  margin: 12px auto 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}

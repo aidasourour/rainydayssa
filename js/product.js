@@ -29,12 +29,22 @@ async function displayProduct() {
             : ""
         }
 
-        <button id="addToCart">Add to Cart</button>
+        <label for="sizeSelect">Choose size:</label>
+
+<select id="sizeSelect" class="size-select">
+  <option value="">Select size</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+</select>
+
+<button id="addToCart">Add to Cart</button>
       </div>
     `;
 
     // Add to cart button
-   document.querySelector("#addToCart").addEventListener("click", () => {
+ document.querySelector("#addToCart").addEventListener("click", () => {
   const size = document.querySelector("#sizeSelect").value;
 
   if (!size) {
