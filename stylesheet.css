@@ -1255,21 +1255,3 @@ footer {
   text-decoration: none;
   cursor: pointer;
 }
-<div id="size-popup" class="size-popup hidden">
-  <div class="size-popup-box">
-    <button id="close-size-popup" class="close-popup">×</button>
-    <h2>Select a size</h2>
-
-    <select id="popup-size-select" class="size-select">
-      <option value="">Choose size</option>
-      <option value="S">S</option>
-      <option value="M">M</option>
-      <option value="L">L</option>
-      <option value="XL">XL</option>
-    </select>
-
-    <button id="confirm-size-btn">Add to Cart</button>
-  </div>
-</div>
-
-<script type="module" src="js/index.js?v=100"></script>
