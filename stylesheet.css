@@ -1237,3 +1237,21 @@ footer {
 .removeBtn:hover {
   background: #b83d39;
 }
+.filter-buttons,
+.category-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.filter-buttons button,
+.category-links a {
+  background: #063b3d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
