@@ -911,3 +911,10 @@ footer {
   border-radius: 8px;
   border: 1px solid #ccc;
 }
+.size-select {
+  display: block;
+  margin: 12px auto 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
