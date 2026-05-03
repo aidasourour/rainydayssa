@@ -14,8 +14,9 @@ function loadCart() {
       </div>
     `;
 
-    if (subtotalElement) subtotalElement.textContent = "$0.00";
-    if (totalElement) totalElement.textContent = "$0.00";
+    subtotalElement.textContent = "$0.00";
+    totalElement.textContent = "$0.00";
+    updateCartCount();
     return;
   }
 
@@ -26,52 +27,45 @@ function loadCart() {
     const price = Number(product.price);
     total += price;
 
-container.innerHTML += `
-  <div class="cart-item">
-    <img 
-      src="${product.image}" 
-      alt="${product.title}" 
-      class="cart-image"
-    >
+    container.innerHTML += `
+      <div class="cart-item">
+        <img src="${product.image}" alt="${product.title}" class="cart-image">
 
-    <div class="cart-info">
-      <h2>${product.title} (${product.size || "No size"})</h2>
+        <div class="cart-info">
+          <h2>${product.title} (${product.size || "No size"})</h2>
+          <p class="cart-size">Size: <strong>${product.size || "Not selected"}</strong></p>
+          <strong>$${price.toFixed(2)}</strong>
+        </div>
 
-      <p class="cart-size">
-        Size: <strong>${product.size || "Not selected"}</strong>
-      </p>
-
-      <strong>$${Number(product.price).toFixed(2)}</strong>
-    </div>
-
-    <button class="removeBtn" data-index="${index}">
-      Remove
-    </button>
-  </div>
-`;
+        <button type="button" class="removeBtn" data-index="${index}">
+          Remove
+        </button>
+      </div>
+    `;
   });
 
-  if (subtotalElement) subtotalElement.textContent = `$${total.toFixed(2)}`;
-  if (totalElement) totalElement.textContent = `$${total.toFixed(2)}`;
+  subtotalElement.textContent = `$${total.toFixed(2)}`;
+  totalElement.textContent = `$${total.toFixed(2)}`;
 
-  const removeButtons = document.querySelectorAll(".removeBtn");
-
-  removeButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const index = this.dataset.index;
-      removeItem(index);
+  document.querySelectorAll(".removeBtn").forEach((button) => {
+    button.addEventListener("click", () => {
+      const index = button.dataset.index;
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
     });
   });
+
+  updateCartCount();
 }
 
-function removeItem(index) {
+function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const countElement = document.querySelector("#cart-count");
 
-  cart.splice(index, 1);
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  loadCart();
+  if (countElement) {
+    countElement.textContent = cart.length;
+  }
 }
 
 loadCart();

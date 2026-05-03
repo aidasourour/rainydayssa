@@ -1207,3 +1207,19 @@ footer {
   padding: 3px 7px;
   border-radius: 50%;
 }
+.removeBtn {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.removeBtn:hover {
+  background: #b83d39;
+}
