@@ -1,4 +1,3 @@
-import "./cartCount.js";
 import { getProduct } from "./api.js";
 
 const container = document.querySelector("#product-container");
@@ -70,7 +69,6 @@ function addToCart(product, size) {
   });
 
   localStorage.setItem("cart", JSON.stringify(cart));
-  updateCartCount();
 }
 
 function showCartPopup() {
@@ -83,7 +81,11 @@ function showCartPopup() {
 
 document.addEventListener("click", (event) => {
   if (event.target.id === "close-popup" || event.target.id === "continue-shopping") {
-    document.querySelector("#cart-popup").classList.add("hidden");
+    const popup = document.querySelector("#cart-popup");
+
+    if (popup) {
+      popup.classList.add("hidden");
+    }
   }
 });
 
