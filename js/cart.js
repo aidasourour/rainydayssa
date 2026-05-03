@@ -2,8 +2,23 @@ const container = document.querySelector("#cart-container");
 const subtotalElement = document.querySelector("#subtotal");
 const totalElement = document.querySelector("#total");
 
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const countElement = document.querySelector("#cart-count");
+
+  if (!countElement) return;
+
+  if (cart.length === 0) {
+    countElement.textContent = "";
+  } else {
+    countElement.textContent = `(${cart.length})`;
+  }
+}
+
 function loadCart() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  container.innerHTML = "";
 
   if (cart.length === 0) {
     container.innerHTML = `
@@ -21,7 +36,6 @@ function loadCart() {
   }
 
   let total = 0;
-  container.innerHTML = "";
 
   cart.forEach((product, index) => {
     const price = Number(product.price);
@@ -32,7 +46,7 @@ function loadCart() {
         <img src="${product.image}" alt="${product.title}" class="cart-image">
 
         <div class="cart-info">
-          <h2>${product.title} (${product.size || "No size"})</h2>
+          <h2>${product.title}</h2>
           <p class="cart-size">Size: <strong>${product.size || "Not selected"}</strong></p>
           <strong>$${price.toFixed(2)}</strong>
         </div>
@@ -47,25 +61,19 @@ function loadCart() {
   subtotalElement.textContent = `$${total.toFixed(2)}`;
   totalElement.textContent = `$${total.toFixed(2)}`;
 
-  document.querySelectorAll(".removeBtn").forEach((button) => {
-    button.addEventListener("click", () => {
-      const index = button.dataset.index;
-      cart.splice(index, 1);
-      localStorage.setItem("cart", JSON.stringify(cart));
-      loadCart();
-    });
-  });
-
   updateCartCount();
 }
 
-function updateCartCount() {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const countElement = document.querySelector("#cart-count");
+container.addEventListener("click", function (event) {
+  if (event.target.classList.contains("removeBtn")) {
+    const index = event.target.dataset.index;
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  if (countElement) {
-    countElement.textContent = cart.length;
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    loadCart();
   }
-}
+});
 
 loadCart();

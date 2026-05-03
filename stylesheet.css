@@ -1223,3 +1223,17 @@ footer {
 .removeBtn:hover {
   background: #b83d39;
 }
+.removeBtn {
+  display: inline-block !important;
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.removeBtn:hover {
+  background: #b83d39;
+}
