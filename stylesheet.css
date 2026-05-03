@@ -783,4 +783,72 @@ footer {
 
 .product-card:hover {
   transform: translateY(-5px);
+}.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.quick-add-btn {
+  width: calc(100% - 36px);
+  margin: 0 18px 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #063b3d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.quick-add-btn:hover {
+  background: #0b5558;
+}
+.quick-add-btn.added {
+  background: #1f7a35;
+}.checkout-page {
+  display: flex;
+  justify-content: center;
+  padding: 80px 24px;
+}
+
+.checkout-card {
+  background: white;
+  max-width: 500px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.checkout-card h1 {
+  margin-bottom: 20px;
+}
+
+#checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#checkout-form input,
+#checkout-form select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#checkout-form button {
+  background: #063b3d;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#checkout-form button:hover {
+  background: #0b5558;
 }

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainydays | Checkout</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="nav-container">
+        <nav class="nav-left">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+        </nav>
+
+        <a href="index.html" class="logo-link">
+          <img src="images-rainy-days/logo.png" class="logo" />
+        </a>
+
+        <nav class="nav-right">
+          <a href="cart.html">Cart</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="checkout-page">
+      <section class="checkout-card">
+        <h1>Checkout</h1>
+
+        <form id="checkout-form">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="text" placeholder="Address" required />
+          <input type="text" placeholder="City" required />
+          <input type="text" placeholder="Postal Code" required />
+
+          <select required>
+            <option value="">Delivery option</option>
+            <option>Standard (Free)</option>
+            <option>Express ($10)</option>
+          </select>
+
+          <button type="submit">Place Order</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Rainydays. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document
+        .querySelector("#checkout-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          window.location.href = "confirmation.html";
+        });
+    </script>
+  </body>
+</html>
