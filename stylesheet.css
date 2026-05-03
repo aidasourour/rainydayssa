@@ -1012,3 +1012,43 @@ footer {
   border-radius: 8px;
   font-weight: bold;
 }
+
+#cart-count {
+  background: #063b3d;
+  color: white;
+  font-size: 12px;
+  padding: 2px 7px;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+.product-detail {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 24px;
+}
+
+.product-detail img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .product-detail {
+    margin: 30px auto;
+    padding: 18px;
+  }
+
+  .product-detail img {
+    max-width: 280px;
+  }
+
+  .product-detail h1 {
+    font-size: 24px;
+  }
+
+  .product-detail p {
+    font-size: 15px;
+  }
+}
