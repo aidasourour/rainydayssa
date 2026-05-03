@@ -1,37 +1,25 @@
 import { getProducts } from "./api.js";
 
-const productsContainer = document.querySelector("#products-container");
+const container = document.querySelector("#products-container");
 const loading = document.querySelector("#loading");
-const errorMessage = document.querySelector("#error");
+const error = document.querySelector("#error");
 
 let selectedProduct = null;
 
 async function displayProducts() {
   try {
-    loading.style.display = "block";
-
     const products = await getProducts();
-
     loading.style.display = "none";
-    productsContainer.innerHTML = "";
 
-    products.forEach((product) => {
-      const price =
-        product.discountedPrice < product.price
-          ? product.discountedPrice
-          : product.price;
+    container.innerHTML = "";
 
-      productsContainer.innerHTML += `
+    products.forEach(product => {
+      container.innerHTML += `
         <div class="product-card">
-          <a href="jacket.html?id=${product.id}" class="product-card-link">
-            <div class="product-image-box">
-              <img src="${product.image.url}" alt="${product.image.alt}">
-            </div>
-
-            <div class="product-card-info">
-              <h2>${product.title}</h2>
-              <p class="product-price">$${Number(price).toFixed(2)}</p>
-            </div>
+          <a href="jacket.html?id=${product.id}">
+            <img src="${product.image.url}" alt="${product.title}">
+            <h2>${product.title}</h2>
+            <p>$${product.price}</p>
           </a>
 
           <button class="quick-add-btn" data-id="${product.id}">
@@ -41,60 +29,45 @@ async function displayProducts() {
       `;
     });
 
-    document.querySelectorAll(".quick-add-btn").forEach((button) => {
-      button.addEventListener("click", () => {
-        selectedProduct = products.find((product) => product.id === button.dataset.id);
-        openSizePopup();
+    document.querySelectorAll(".quick-add-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        selectedProduct = products.find(p => p.id === btn.dataset.id);
+        document.querySelector("#size-popup").classList.remove("hidden");
       });
     });
 
-  } catch (error) {
+  } catch (err) {
     loading.style.display = "none";
-    errorMessage.textContent = "Could not load products.";
-    console.error(error);
+    error.textContent = "Failed to load products.";
+    console.error(err);
   }
-}
-
-function openSizePopup() {
-  document.querySelector("#size-popup").classList.remove("hidden");
-}
-
-function closeSizePopup() {
-  document.querySelector("#size-popup").classList.add("hidden");
-  document.querySelector("#popup-size-select").value = "";
-}
-
-function addToCart(product, size) {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  const price =
-    product.discountedPrice < product.price
-      ? product.discountedPrice
-      : product.price;
-
-  cart.push({
-    id: product.id,
-    title: product.title,
-    price: price,
-    image: product.image.url,
-    size: size
-  });
-
-  localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 document.querySelector("#confirm-size-btn").addEventListener("click", () => {
   const size = document.querySelector("#popup-size-select").value;
 
   if (!size) {
-    alert("Please select a size");
+    alert("Select a size");
     return;
   }
 
-  addToCart(selectedProduct, size);
-  closeSizePopup();
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cart.push({
+    id: selectedProduct.id,
+    title: selectedProduct.title,
+    price: selectedProduct.price,
+    image: selectedProduct.image.url,
+    size: size
+  });
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  document.querySelector("#size-popup").classList.add("hidden");
 });
 
-document.querySelector("#close-size-popup").addEventListener("click", closeSizePopup);
+document.querySelector("#close-size-popup").addEventListener("click", () => {
+  document.querySelector("#size-popup").classList.add("hidden");
+});
 
 displayProducts();
