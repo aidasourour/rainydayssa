@@ -1093,3 +1093,6 @@ footer {
   color: #063b3d;
   font-weight: bold;
 }
+.hidden {
+  display: none !important;
+}
