@@ -35,7 +35,7 @@ container.innerHTML += `
     >
 
     <div class="cart-info">
-      <h2>${product.title}</h2>
+      <h2>${product.title} (${product.size || "No size"})</h2>
 
       <p class="cart-size">
         Size: <strong>${product.size || "Not selected"}</strong>
