@@ -1,3 +1,4 @@
+import "./cartCount.js";
 import { getProducts } from "./api.js";
 
 const container = document.querySelector("#products-container");
@@ -62,6 +63,7 @@ document.querySelector("#confirm-size-btn").addEventListener("click", () => {
   });
 
   localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
 
   document.querySelector("#size-popup").classList.add("hidden");
 });

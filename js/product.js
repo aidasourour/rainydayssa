@@ -1,3 +1,4 @@
+import "./cartCount.js";
 import { getProduct } from "./api.js";
 
 const container = document.querySelector("#product-container");
@@ -69,6 +70,7 @@ function addToCart(product, size) {
   });
 
   localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
 }
 
 function showCartPopup() {

@@ -1,6 +1,12 @@
-const cartCount = document.querySelector("#cart-count");
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const count = cart.length;
 
-if (cartCount) {
-  cartCount.textContent = cart.length;
+  const countElement = document.querySelector("#cart-count");
+
+  if (countElement) {
+    countElement.textContent = count;
+  }
 }
+
+updateCartCount();

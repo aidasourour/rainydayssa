@@ -1200,3 +1200,10 @@ footer {
     flex-direction: column;
   }
 }
+#cart-count {
+  background: #063b3d;
+  color: white;
+  font-size: 12px;
+  padding: 3px 7px;
+  border-radius: 50%;
+}
