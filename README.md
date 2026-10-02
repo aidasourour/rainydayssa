@@ -1,15 +1,14 @@
 # RainyDays
 
-RainyDays is an online store for outdoor jackets. This project was created as part of my Frontend Development studies at Noroff.
+RainyDays is an online store for outdoor jackets.
+This project was created as part of my Frontend Development studies at Noroff.
 
-## About the Project
+## Features
 
-The website allows users to:
-
-- View available products
+- View products
 - View product details
-- Add products to a shopping cart
-- Complete a checkout form
+- Add products to cart
+- Checkout form
 
 ## Built With
 
@@ -19,8 +18,8 @@ The website allows users to:
 
 ## Live Website
 
-[View RainyDays here](ADD-YOUR-LIVE-WEBSITE-LINK-HERE)
+https://aidasourour.github.io/rainydayssa/
 
 ## GitHub Repository
 
-[View the repository](ADD-YOUR-GITHUB-REPOSITORY-LINK-HERE)
+https://github.com/aidasourour/rainydayssa
